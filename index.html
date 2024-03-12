@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </script>
     <link rel="stylesheet" href="css\style.css">
     <title>Meu Portfólio</title>
 </head>
@@ -17,13 +18,11 @@
             <div class="nav">
                 <nav>
                     <ul class="menu">
-                        <li class="item">
-                            <a href="#">Início</a>
-                        </li>
-                        <li class="item"><a href="#">Sobre</a></li>
-                        <li class="item"><a href="#Habilidades">Habilidades</a></li>
-                        <li class="item"><a href="#">Projetos</a></li>
-                        <li class="item"><a href="#">Contato</a></li>
+                        <li class="item"><a href="#">inicio</a></li>
+                        <li class="item"><a href="#">sobre</a></li>
+                        <li class="item"><a href="#Habilidades">habilidades</a></li>
+                        <li class="item"><a href="#">projetos</a></li>
+                        <li class="item"><a href="#">contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,22 +33,25 @@
         <section class="inicio">
             <div class="main container">
                 <div class="conteudo">
-                    <h1>Olá, eu sou <br>Karielly de Carvalho</h1>
+                    <h1>Olá, eu sou <br><span class="meu-nome">Karielly de Carvalho</span></h1>
                     <p>Graduando em Análise e Desenvolvimento de Sistemas</p>
-                    <a class="link-botao" href="https://web.whatsapp.com/"><button class="botao">Entre em
-                            Contato</button></a>
+                    <a class="link-botao" href="https://web.whatsapp.com/">
+                        <button class="botao">Entre em Contato</button>
+                    </a>
                 </div>
-                <div class="conteudo-2">
-                    <div class="circle-img"></div>
-                </div>
+                <div class="quadrado"></div>
+                <img class="perfil" src="img/eu-img.png" alt="Foto de Karielly">
             </div>
         </section>
 
         <section class="sobre">
             <div class="meu-texto container">
-                <h2 class="titulo-sobre">Sobre mim</h2>
+                <div class="meu-sobre">
+                    <img class="icone-sobre" src="img\icone-sobre.png" alt="">
+                    <h2 class="titulo-sobre">Sobre mim</h2>
+                </div>
                 <p>
-                    Sou Karielly de Carvalho, tenho 18 anos e atualmente estou cursando Análise e Desenvolviemnto de
+                    Sou Karielly de Carvalho, tenho 18 anos e atualmente estou cursando Análise e Desenvolvimento de
                     Sistemas. Gosto muito da área da tecnologia e estou sempre buscando aprender cada vez mais. Quero
                     ser uma desenvolvedora full stack para poder participar das duas partes do desenvolvimento de um
                     software, tanto o front-end quanto o back-end. Sou uma pessoa organizada e procuro sempre cumprir
@@ -60,7 +62,32 @@
         </section>
 
         <section class="habilidades">
-
+            <h2 class="titulo-habilidades">Habilidades</h2>
+            <div class="habilidades-conteudo">
+                <div class="card">
+                    <img class="icone-habilidade" src="img\icone-html.svg" alt="Imagem do HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="card">
+                    <img class="icone-habilidade" src=" img\icone-css.svg" alt="Imagem do CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="card">
+                    <img class="icone-habilidade" src="img\icone-java.svg" alt="Imagem da linguagem Java">
+                    <p>Java</p>
+                </div>
+                <div class="card">
+                    <img class="icone-habilidade" src="img\icone-js.svg" alt="Imagem da linguagem JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="card">
+                    <img class="icone-habilidade" src="img\icone-python.svg" alt="Imagem da linguagem Python">
+                    <p>Python</p>
+                </div>
+                <div class="card">
+                    <img class="icone-habilidade" src="img\icone-github.svg" alt="Imagem do GitHub">
+                    <p>GitHub</p>
+                </div>
 
         </section>
 

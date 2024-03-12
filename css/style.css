@@ -8,6 +8,7 @@
 }
 
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -21,9 +22,12 @@ body {
 header{
     display: flex;
     align-items: center;
-    background-color: #781D42;
+    background-color: #fff;
     padding: 10px;
     height: 50px;
+    /* sombra na parte de baixo do header */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 .header {
@@ -39,12 +43,12 @@ header{
 }
 
 .icones ion-icon{
-    font-size: 25px;
-    color: #fff;
+    font-size: 27px;
+    color: #781D42;
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 0;
 }
@@ -67,9 +71,10 @@ header{
 
 .item a {
     text-decoration: none; 
-    color: #fff; 
-    font-size: 17px; 
-    font-family: "Source Sans 3", sans-serif;
+    color: #781D42; 
+    font-size: 19px; 
+    font-family: 'roboto', sans-serif;
+    
 }
 
 .conteudo{
@@ -79,21 +84,21 @@ header{
     /* background-color: purple; */
     width: 75%;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px;
+    align-items: left;
+    text-align: justify;
+    /* padding: 80px; */
 }
 
 .conteudo h1{
     font-family: 'roboto', sans-serif;
     font-size: 45px;
-    color: #A3423C;
+    color: black;
 }
 
 .conteudo p{
     font-family: 'roboto', sans-serif;
     font-size: 23px;
-    color: #A3423C;
+    color: black;
 }
 
 .inicio{
@@ -102,48 +107,40 @@ header{
     height: calc(100vh - 50px);
 }
 
-/* .retangulo{
-    background-color: #E5BA73;
+.quadrado {
     display: flex;
-    width: 25%;
-    height: calc(100vh - 50px);
-} */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22%;
+    height: 100vh;
+    z-index: 1;
+    background-color: #683f4f;
+}
 
 .main{
     display: flex;
-    justify-content: row;
+    justify-content: space-between;
     /* background-color: aqua; */
 }
 
-.conteudo-2{
-    display: flex;
-    padding: 20px;  
-    align-items: center;
-    justify-content: center;
-    /* min-width: 100%; */
-
+.meu-nome{
+    color: #781D42;
 }
 
-.circle-img{
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    /* background-color: rgb(152 152 203); */
-    background-image: url(../img/eu-img.png);
-    background-size: cover;
-    background-position: top;
+.perfil{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 2; 
 }
+
 
 .botao{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    background-color: #A3423C;
-    border: solid 1px #A3423C;
+    background-color: #781D42;
+    border: solid 1px #781D42;
     border-radius: 16px;
     color: #fff;
     width: 200px;
@@ -153,7 +150,7 @@ header{
 
 .botao:hover{
     background-color: #fff;
-    color: #A3423C;
+    color: #781D42;
 }
 
 .botao a{
@@ -164,10 +161,13 @@ header{
 
 .link-botao{
     text-decoration: none;
+    width: 200px;
+    height: 50px;
 }
 
 .sobre{
-    background-color: #FFBE98;
+    background-color: #F2F2F2;
+    padding: 2rem 0 2rem 0;
 }
 
 .meu-texto{
@@ -175,18 +175,80 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: center;
     width: 55%;
-    padding: 30px;
     font-family: "Scada", sans-serif;
-    color: #781D42;
-    font-size: 16px;
+    color: black;
+    font-size: 1.1rem;
 }
 
 .titulo-sobre{
     margin-bottom: 10px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.5rem;
 }
 
+.habilidades-conteudo{
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: "Source Sans 3", sans-serif;
+    gap: 1rem;
+}
+
+.meu-sobre{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titulo-habilidades{
+    padding: 30px;
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.icone-sobre{
+    width: 70px;
+    height: 70px;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-top: #73465B 5px solid;  
+    border-right: #73465B 5px solid;
+    width: 7rem;
+    height: 7rem;
+    padding: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 0.7rem;
+    background-color: #F2F2F2;
+    transition: all 0.2s ease;  
+}
+
+.card:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.icone-habilidade{
+    display: flex;
+    height: 50px;
+
+}
 
 /* footer{
     height: 60px;
