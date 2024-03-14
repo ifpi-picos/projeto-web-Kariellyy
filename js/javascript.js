@@ -1,8 +1,3 @@
-function toggleNav() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('mobile');
-}
-
 const meuNome = "Karielly de Carvalho";
 const texto = "Graduando em Análise e Desenvolvimento de Sistemas";
 const nomeSpan = document.querySelector('.meu-nome');
