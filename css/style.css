@@ -1,110 +1,125 @@
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Fredericka+the+Great&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* Variáveis de cor */
 :root {
-    --primary-color: #FFBE98;
-    --secondary-color: #F7DED0;
+    --primary-color: #401122;
+    --secondary-color: #781D42;
+    --terciary-color: #F2F2F2;
+    --quaternary-color: #fff;
+    --quinary-color: #0D0D0D;
 }
 
+/* Reset CSS */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Corpo do documento */
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-header{
+/* Cabeçalho */
+header {
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--terciary-color);
     padding: 10px;
     height: 50px;
-    /* sombra na parte de baixo do header */
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     z-index: 100;
+    /* deixar o header fixo */
+    position: fixed;
+    width: 100%;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
 }
 
-.icones{
+/* Ícones no cabeçalho */
+.icones {
     display: flex;
     justify-content: space-between;
 }
 
-.icones ion-icon{
+.icones ion-icon {
     font-size: 27px;
-    color: #781D42;
+    color: var(--primary-color);
+    
 }
 
-.container{
+/* Container */
+.container {
     width: 85%;
     margin: 0 auto;
     padding: 0;
 }
 
-.nav{
+/* Navegação */
+.nav {
     display: flex;
     justify-content: space-between;
 }
 
 .menu {
     display: flex;
-    justify-content: space-between; 
-    list-style-type: none; 
-    padding: 0; 
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
 }
 
 .item {
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .item a {
-    text-decoration: none; 
-    color: #781D42; 
-    font-size: 19px; 
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 19px;
     font-family: 'roboto', sans-serif;
-    
 }
 
-.conteudo{
+/* Conteúdo principal */
+.conteudo {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #000; */
-    /* background-color: purple; */
     width: 75%;
     justify-content: center;
     align-items: left;
     text-align: justify;
-    /* padding: 80px; */
 }
 
-.conteudo h1{
+.ola {
+    font-weight: bold;
+}
+
+.conteudo h1 {
     font-family: 'roboto', sans-serif;
     font-size: 45px;
-    color: black;
+    color: var(--secondary-color);
 }
 
-.conteudo p{
+.conteudo p {
     font-family: 'roboto', sans-serif;
     font-size: 23px;
-    color: black;
+    color: var(--quinary-color);
 }
 
-.inicio{
-    /* border: 1px solid #000; */
+/* Seção Início */
+.inicio {
     display: flex;
     height: calc(100vh - 50px);
+    margin-top: 50px;
 }
 
 .quadrado {
@@ -115,32 +130,32 @@ header{
     width: 22%;
     height: 100vh;
     z-index: 1;
-    background-color: #683f4f;
+    background-color: var(--primary-color);
 }
 
-.main{
+/* Parte principal do conteúdo */
+.main {
     display: flex;
     justify-content: space-between;
-    /* background-color: aqua; */
 }
 
-.meu-nome{
-    color: #781D42;
+.meu-nome {
+    color: var(--secondary-color);
 }
 
-.perfil{
+.perfil {
     display: flex;
-    z-index: 2; 
+    z-index: 2;
 }
 
-
-.botao{
+/* Botão */
+.botao {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    background-color: #781D42;
-    border: solid 1px #781D42;
+    background-color: var(--secondary-color);
+    border: solid 1px var(--secondary-color);
     border-radius: 16px;
     color: #fff;
     width: 200px;
@@ -148,29 +163,30 @@ header{
     font-size: 19px;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #fff;
     color: #781D42;
 }
 
-.botao a{
-    color: #fff; 
-    font-size: 17px; 
+.botao a {
+    color: #fff;
+    font-size: 17px;
     font-family: "Source Sans 3", sans-serif;
 }
 
-.link-botao{
+.link-botao {
     text-decoration: none;
     width: 200px;
     height: 50px;
 }
 
-.sobre{
+/* Seção Sobre */
+.sobre {
     background-color: #F2F2F2;
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0 3rem 0;
 }
 
-.meu-texto{
+.meu-texto {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,53 +196,59 @@ header{
     font-family: "Scada", sans-serif;
     color: black;
     font-size: 1.1rem;
+    padding-bottom: 1rem;
 }
 
-.titulo-sobre{
+.titulo-sobre {
     margin-bottom: 10px;
     font-family: "Source Sans 3", sans-serif;
     font-size: 1.5rem;
 }
 
-.habilidades-conteudo{
+.meu-sobre {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Seção Habilidades */
+.habilidades-conteudo {
     flex-wrap: wrap;
     flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     font-size: 1.1rem;
     font-family: "Source Sans 3", sans-serif;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 1rem 0 1rem 0;
 }
 
-.meu-sobre{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+
+.habilidades {
+    padding: 3rem 0 3rem 0;
 }
 
-.titulo-habilidades{
-    padding: 30px;
+.titulo-habilidades {
+    padding-bottom: 2rem;
     text-align: center;
     font-family: "Source Sans 3", sans-serif;
     color: black;
     font-size: 1.5rem;
 }
 
-.icone-sobre{
-    width: 70px;
-    height: 70px;
-
+.icone-sobre {
+    width: 60px;
+    height: 60px;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
-    border-top: #73465B 5px solid;  
-    border-right: #73465B 5px solid;
+    border-top: var(--secondary-color) 5px solid;
+    border-right: var(--secondary-color) 5px solid;
     width: 7rem;
     height: 7rem;
     padding: 1.3rem;
@@ -234,24 +256,155 @@ header{
     justify-content: center;
     box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    gap: 0.7rem;
+    gap: 1.2rem;
     background-color: #F2F2F2;
-    transition: all 0.2s ease;  
+    transition: all 0.2s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.2);
     z-index: 1;
 }
 
-.icone-habilidade{
+.icone-habilidade {
     display: flex;
     height: 50px;
+}
+
+/* Seção Projetos */
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--terciary-color);
+    padding: 2rem 0 2rem 0;
+}
+
+.conteudo-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 0 3rem 0;
+}
+
+.parte-projetos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.projeto {
+    position: relative; /* Adicionando posição relativa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    min-width: 20rem;
+    flex-grow: 1;
+    width: 10rem;
+    overflow: hidden; /* Oculta os detalhes que ultrapassam o projeto */
+}
+
+.projeto:hover .imagem-projeto {
+    filter: brightness(0.4); /* Aplica o efeito de escurecimento apenas na imagem */
+    transition: filter 0.2s ease; /* Adiciona uma transição suave */
+}
+
+.imagem-projeto {
+    max-width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.2s ease; /* Adiciona uma transição suave para o efeito de escala */
+}
+
+.conteudo-projetos h2{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.5rem;
+    color: var(--quinary-color);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.detalhes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 0.6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detalhes p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.icones-linguagens img {
+    width: 2.5rem;
+}
+
+.projeto:hover .detalhes {
+    display: flex;
+}
+
+.projeto:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Seção footer */
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--quaternary-color);
+    padding: 3rem 0 3rem 0;
+}
+
+.contato h2 {
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.icones-contato{
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
 
-/* footer{
-    height: 60px;
-    background-color: #FFBE98;
 
-} */
+.contato-estilo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--quaternary-color);
+}
+
+.contato-estilo:hover{
+    transform: scale(1.1);
+    color: var(--secondary-color);
+}
