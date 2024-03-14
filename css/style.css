@@ -17,6 +17,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 /* Corpo do documento */
@@ -26,67 +28,78 @@ body {
     justify-content: space-between;
 }
 
-/* Cabeçalho */
-header {
-    display: flex;
-    align-items: center;
-    background-color: var(--terciary-color);
-    padding: 10px;
-    height: 50px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    /* deixar o header fixo */
-    position: fixed;
-    width: 100%;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Ícones no cabeçalho */
-.icones {
-    display: flex;
-    justify-content: space-between;
-}
-
-.icones ion-icon {
-    font-size: 27px;
-    color: var(--primary-color);
-    
-}
-
-/* Container */
 .container {
     width: 85%;
     margin: 0 auto;
     padding: 0;
 }
 
-/* Navegação */
-.nav {
+/* Cabeçalho */
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: var(--terciary-color);
+    z-index: 100;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone ion-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 .menu {
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.item {
-    margin-right: 20px;
-}
-
-.item a {
-    text-decoration: none;
+.menu a {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    font-family: "roboto", sans-serif;
     color: var(--primary-color);
-    font-size: 19px;
-    font-family: 'roboto', sans-serif;
+}
+
+.menu:hover a {
+    opacity: 0.4;
+}
+
+.menu a:hover {
+    opacity: 1;
+    color: var(--quinary-color);
+}
+
+.menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.menu {
+    transform: scale(1, 1);
 }
 
 /* Conteúdo principal */
@@ -157,19 +170,19 @@ header {
     background-color: var(--secondary-color);
     border: solid 1px var(--secondary-color);
     border-radius: 16px;
-    color: #fff;
+    color: var(--quaternary-color);
     width: 200px;
     height: 50px;
     font-size: 19px;
 }
 
 .botao:hover {
-    background-color: #fff;
-    color: #781D42;
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
 }
 
 .botao a {
-    color: #fff;
+    color: var(--quaternary-color);
     font-size: 17px;
     font-family: "Source Sans 3", sans-serif;
 }
@@ -182,7 +195,7 @@ header {
 
 /* Seção Sobre */
 .sobre {
-    background-color: #F2F2F2;
+    background-color: var(--terciary-color);
     padding: 3rem 0 3rem 0;
 }
 
@@ -194,7 +207,7 @@ header {
     text-align: center;
     width: 55%;
     font-family: "Scada", sans-serif;
-    color: black;
+    color: var(--quinary-color);
     font-size: 1.1rem;
     padding-bottom: 1rem;
 }
@@ -235,7 +248,7 @@ header {
     padding-bottom: 2rem;
     text-align: center;
     font-family: "Source Sans 3", sans-serif;
-    color: black;
+    color: var(--quinary-color);
     font-size: 1.5rem;
 }
 
@@ -257,7 +270,7 @@ header {
     box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     gap: 1.2rem;
-    background-color: #F2F2F2;
+    background-color: var(--terciary-color);
     transition: all 0.2s ease;
 }
 
@@ -303,7 +316,8 @@ header {
 }
 
 .projeto {
-    position: relative; /* Adicionando posição relativa */
+    position: relative;
+    /* Adicionando posição relativa */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,21 +326,25 @@ header {
     min-width: 20rem;
     flex-grow: 1;
     width: 10rem;
-    overflow: hidden; /* Oculta os detalhes que ultrapassam o projeto */
+    overflow: hidden;
+    /* Oculta os detalhes que ultrapassam o projeto */
 }
 
 .projeto:hover .imagem-projeto {
-    filter: brightness(0.4); /* Aplica o efeito de escurecimento apenas na imagem */
-    transition: filter 0.2s ease; /* Adiciona uma transição suave */
+    filter: brightness(0.4);
+    /* Aplica o efeito de escurecimento apenas na imagem */
+    transition: filter 0.2s ease;
+    /* Adiciona uma transição suave */
 }
 
 .imagem-projeto {
     max-width: 100%;
     border-radius: 1rem;
-    transition: transform 0.2s ease; /* Adiciona uma transição suave para o efeito de escala */
+    transition: transform 0.2s ease;
+    /* Adiciona uma transição suave para o efeito de escala */
 }
 
-.conteudo-projetos h2{
+.conteudo-projetos h2 {
     font-family: "Source Sans 3", sans-serif;
     font-size: 1.5rem;
     color: var(--quinary-color);
@@ -348,7 +366,7 @@ header {
 .detalhes p {
     font-size: 1.2rem;
     font-weight: bold;
-    color: white;
+    color: var(--quaternary-color);
     font-family: "Source Sans 3", sans-serif;
 }
 
@@ -383,7 +401,7 @@ header {
     padding-bottom: 4rem;
 }
 
-.icones-contato{
+.icones-contato {
     display: flex;
     gap: 3rem;
     flex-direction: row;
@@ -394,7 +412,7 @@ header {
 }
 
 
-.contato-estilo{
+.contato-estilo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -404,7 +422,43 @@ header {
     color: var(--quaternary-color);
 }
 
-.contato-estilo:hover{
+.contato-estilo:hover {
     transform: scale(1.1);
     color: var(--secondary-color);
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        background-color: var(--terciary-color);
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 1rem;
+    }
+
+    .menu a {
+        margin-left: 12px;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        color: var(--primary-color);
+        font-size: 28px;
+        cursor: pointer;
+    }
 }
