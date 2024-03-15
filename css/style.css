@@ -102,6 +102,38 @@ nav {
     transform: scale(1, 1);
 }
 
+/* .botao-dark{
+    width: 60px;
+    height: 20px;
+    background-color: var(--quinary-color);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.botao-dark .indicador {
+    width: 20px;
+    height: 20px;
+    background-color: var(--quaternary-color);
+    border-radius: 50%;
+    transform: scale(0.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+} */
+
+/* .botao-dark.dark {
+    background-color: var(--terciary-color);
+}
+
+
+.botao-dark.dark .indicador {
+    left: 50px;
+    background-color: var(--quinary-color);
+
+    
+} */
+
 /* Conteúdo principal */
 .conteudo {
     display: flex;
@@ -254,7 +286,7 @@ nav {
 
 
 .habilidades {
-    padding: 3rem 0 3rem 0;
+    padding: 5rem 0 5rem 0;
 }
 
 .titulo-habilidades {
@@ -434,7 +466,7 @@ nav {
 
 .contato-estilo:hover {
     transform: scale(1.1);
-    color: var(--secondary-color);
+    color: var(--quaternary-color);
 }
 
 /* Responsividade */

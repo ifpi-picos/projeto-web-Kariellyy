@@ -25,3 +25,8 @@ function digitarTexto() {
 
 addEventListener('load', digitarNome);
 
+// let botaoDark = document.querySelector('.botao-dark');
+
+// botaoDark.addEventListener('click', () => {
+//     botaoDark.classList.toggle('dark');
+// })
